@@ -438,7 +438,6 @@ footer {
   color: var(--white);
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -446,9 +445,12 @@ footer {
   max-width: 80%;
   border-top: 2px solid var(--white);
   margin-top: var(--s1);
+  display: flex;
+  align-self: center;
 }
 
-.newsletter, .museum {
+.newsletter,
+.museum {
   padding: var(--s_1) var(--s4) var(--s1) var(--s4);
 }
 
