@@ -439,19 +439,20 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .footer__img {
-  max-width: 80%;
+  max-width: 90%;
   border-top: 2px solid var(--white);
-  margin-top: var(--s1);
+  margin-top: var(--s4);
   display: flex;
   align-self: center;
 }
 
 .newsletter,
 .museum {
-  padding: var(--s_1) var(--s4) var(--s1) var(--s4);
+  margin: var(--s_1) var(--s4) var(--s_1) var(--s4);
 }
 
 .footer__text {
@@ -459,7 +460,6 @@ footer {
 }
 
 .footer__button {
-  border: none;
   background-color: var(--orange);
   color: var(--white);
   padding: var(--s_1);
