@@ -241,6 +241,7 @@ img {
   background-color: var(--orange_light);
   margin: var(--s2) var(--s1);
   padding: var(--s1);
+  padding-bottom: 2rem;
 }
 
 .section3__list-item::before {
@@ -254,6 +255,36 @@ img {
   vertical-align: middle;
   line-height: 0.6;
 }
+
+.section3__list-item::after {
+  content: '';
+  color: var(--white);
+  /* background-color: var(--black); */
+  padding: var(--s_1);
+  border-radius: 100%;
+  width: var(--s1);
+  height: var(--s1);
+  display: flex;
+  justify-self: end;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+  margin-right: -1.3rem;
+}
+
+.section3__list-item.right::after {
+  content: '✓';
+  background-color: var(--black);
+}
+
+.section3__list-item.wrong::after {
+  content: '+';
+  background-color: var(--black);
+  color: var(--orange_light);
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
 
 .section3__info {
   background-color: var(--beige);
@@ -368,7 +399,7 @@ img {
   background-image: url("./assets/img/png/tornpaper_orange.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size:contain;
+  background-size: contain;
   height: 5rem;
   margin-left: -6rem;
 }
