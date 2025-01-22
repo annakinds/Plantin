@@ -318,6 +318,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: end;
+  margin-bottom: var(--s1);
 }
 
 .hourglass {
