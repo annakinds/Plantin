@@ -108,14 +108,19 @@ img {
   grid-row: 3;
   display: flex;
   align-self: center;
+  height: 60px;
+  width: auto;
+  margin-left: -7rem;
 }
 
 .heroimg__text1 {
-  grid-column: 3/span 2;
+  grid-column: 2/span 3;
   grid-row: 3;
   display: flex;
   align-items: center;
-  padding-left: var(--s1);
+  margin-left: -0.3rem;
+  z-index: -1;
+  padding-right: var(--s1);
 }
 
 .heroimg__text2 {
@@ -168,6 +173,8 @@ img {
 .elegantBig {
   font-family: Gwendolyn;
   font-size: 6rem;
+  display: inline-block;
+  height: 1rem;
 }
 
 .section1__text1,
@@ -252,14 +259,24 @@ img {
   background-color: var(--beige);
   padding: var(--s1);
   margin-left: var(--s4);
+  padding-right: var(--s1);
+  display: flex;
+  flex-direction: column;
 }
 
 .info__button {
   background-color: var(--orange);
   color: var(--white);
-  border: none;
+  text-decoration: none;
   padding: var(--s_1);
   margin-top: var(--s1);
+  width: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+.info__button:hover {
+  background-color: var(--black);
 }
 
 #section4 {
@@ -293,26 +310,41 @@ img {
 #section6 {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: var(--s1) 0rem;
 }
 
 .section6__img {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.beerAndHourglass {
-  display: flex;
-  flex-direction: row;
+.hourglass {
+  max-width: 50%;
+}
+
+.beer {
+  max-width: 40%;
+  margin-top: -0.3rem;
 }
 
 .globe {
-  transform: rotate(-11deg);
+  transform: rotate(11deg);
+  margin-bottom: -0.7rem;
+}
+
+.passer {
+  margin-bottom: -2rem;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
 }
 
 .section6__text {
   display: flex;
   flex-direction: column;
   /* width: 30rem; */
+  max-width: 14rem;
 }
 
 .section6__text1 {
@@ -321,6 +353,7 @@ img {
 
 .section6__text2 {
   padding: var(--s1);
+  margin-top: -1rem;
 }
 
 .section6__button {
@@ -328,13 +361,14 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   padding: var(--s1);
-  margin-left: var(--s1);
   border: none;
   background-color: transparent;
   background-image: url("./assets/img/png/tornpaper_orange.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto;
+  background-size:contain;
+  height: 5rem;
+  margin-left: -6rem;
 }
 
 #section7 {
