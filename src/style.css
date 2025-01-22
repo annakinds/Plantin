@@ -436,24 +436,24 @@ img {
 footer {
   background-color: var(--black);
   color: var(--white);
-  display: grid;
-  grid-template-columns: 2fr auto;
-  grid-template-rows: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer__img {
-  grid-column: 1;
-  grid-row: 1/span 2;
+  max-width: 80%;
+  border-top: 2px solid var(--white);
+  margin-top: var(--s1);
 }
 
-.newsletter {
-  grid-column: 2;
-  grid-row: 1;
+.newsletter, .museum {
+  padding: var(--s_1) var(--s4) var(--s1) var(--s4);
 }
 
-.museum {
-  grid-column: 2;
-  grid-row: 2;
+.footer__text {
+  padding: var(--s1) 0rem;
 }
 
 .footer__button {
@@ -462,4 +462,6 @@ footer {
   color: var(--white);
   padding: var(--s_1);
   text-transform: uppercase;
+  text-decoration: none;
+  font-size: var(--fs-s);
 }
