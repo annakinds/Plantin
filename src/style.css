@@ -100,7 +100,10 @@ img {
   grid-column: 1/span 3;
   grid-row: 2;
   display: flex;
-  align-self: center;
+  align-self: stretch;
+  object-fit: cover;
+  object-position: bottom center;
+  margin-top: 1rem;
 }
 
 .heroimg__photo2 {
@@ -108,9 +111,12 @@ img {
   grid-row: 3;
   display: flex;
   align-self: center;
-  height: 60px;
+  object-fit: cover;
+  object-position: bottom center;
+  height: 68px;
   width: auto;
   margin-left: -7rem;
+  clip-path: inset(0 60px 0 0);
 }
 
 .heroimg__text1 {
@@ -149,7 +155,10 @@ img {
   grid-column: 2/span 3;
   grid-row: 4;
   display: flex;
-  align-self: center;
+  align-self: stretch;
+  object-fit: cover;
+  object-position: bottom center;
+  margin-bottom: 1rem;
 }
 
 #section1 {
@@ -200,6 +209,12 @@ img {
 .section1__img {
   z-index: 1;
   margin-bottom: -9rem;
+  width: 160%;
+  display: flex;
+  justify-self: center;
+  align-self: stretch;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .section1__text2 {
@@ -354,23 +369,24 @@ img {
 }
 
 .hourglass {
-  max-width: 50%;
+  width: 60%;
 }
 
 .beer {
-  max-width: 40%;
-  margin-top: -0.3rem;
+  width: 60%;
+  margin-top: -1.5rem;
 }
 
 .globe {
-  transform: rotate(11deg);
-  margin-bottom: -0.7rem;
+  margin-bottom: -0.6rem;
+  width: 70%;
 }
 
 .passer {
   margin-bottom: -2rem;
   margin-top: 2rem;
   margin-right: 0.5rem;
+  width: 100%;
 }
 
 .section6__text {
@@ -402,18 +418,34 @@ img {
   background-size: contain;
   height: 5rem;
   margin-left: -6rem;
+  z-index: -1;
 }
 
 #section7 {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .section7__title {
   grid-column: 2;
   grid-row: 1;
-  padding-left: var(--s3);
+  padding-left: 3.6rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.section7__title::after {
+  content: '';
+  background-color: var(--orange);
+  width: 15rem;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 6.5rem;
+  z-index: -1;
 }
 
 .section7__title-2 {
@@ -425,12 +457,78 @@ img {
 .section7__photo {
   grid-column: 1;
   grid-row: 2;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+}
+
+.section7__photo::before {
+  content: '';
+  background-image: url('./src/assets/img/png/bibliaborder_horizontal_mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  width: 390px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 10;
+}
+
+.section7__photo::after {
+  content: '';
+  background-image: url('./assets/img/png/biblaborder_vertical_mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  width: 42px;
+  height: 390px;
+  position: absolute;
+  top: -4.8rem;
+  left: 4.3rem;
+  z-index: 10;
 }
 
 .section7__text {
   grid-column: 2;
   grid-row: 2;
-  padding-left: var(--s3);
+  padding-left: 3.6rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.section7__text::before {
+  content: '';
+  background-color: var(--orange);
+  width: 1.2rem;
+  height: 26rem;
+  position: absolute;
+  left: 2rem;
+  top: -10rem;
+  z-index: -2;
+}
+
+.section8__text {
+  display: flex;
+  flex-direction: row;
+}
+
+.section8__text1 {
+  max-width: 10rem;
+}
+
+.section8__text2 {
+  max-width: 10rem;
+}
+
+.section8__photo2 {
+  margin-top: -4rem;
+  margin-bottom: 14rem;
 }
 
 footer {

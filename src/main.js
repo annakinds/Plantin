@@ -4,7 +4,7 @@ import Sortable from 'sortablejs';
 
 const drawHeroimage = () => {
   gsap.to(".heroimg__photo2", {
-    x: -220,
+    x: -270,
     willChange: "transform",
     scrollTrigger: {
       trigger: "body",
@@ -60,9 +60,23 @@ const passerObjects = () => {
   });
 }
 
+const rippingMoney = () => {
+  gsap.to(".section8__photo2", {
+    y: +200,
+    scrollTrigger: {
+      trigger: ".section8__photo2",
+      start: "start bottom",
+      end: "bottom center",
+      markers: true,
+      scrub: true,
+    },
+  });
+}
+
 const init = () => {
   drawHeroimage();
   printingPress();
   passerObjects();
+  rippingMoney();
 }
 init();
