@@ -562,7 +562,6 @@ img {
   display: grid;
   grid-template-rows: 2fr 3fr 2fr;
   grid-template-columns: auto;
-  height: 30rem;
 }
 
 section {
@@ -589,6 +588,7 @@ section {
   z-index: 1;
   display: flex;
   align-self: center;
+  margin-bottom: -1rem;
 }
 
 .section9__text {
