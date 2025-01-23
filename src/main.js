@@ -1,6 +1,7 @@
 import './reset.css';
 import './style.css';
 import Sortable from 'sortablejs';
+import Swiper from 'swiper';
 
 const drawHeroimage = () => {
   gsap.to(".heroimg__photo2", {
@@ -64,19 +65,43 @@ const rippingMoney = () => {
   gsap.to(".section8__photo2", {
     y: +200,
     scrollTrigger: {
-      trigger: ".section8__photo2",
+      trigger: ".section8__photo1",
       start: "start bottom",
       end: "bottom center",
-      markers: true,
+      // markers: true,
+      scrub: true,
+    },
+  });
+  gsap.to(".section8__photo1", {
+    y: -50,
+    scrollTrigger: {
+      trigger: ".section8__photo1",
+      start: "start bottom",
+      end: "bottom center",
+      // markers: true,
       scrub: true,
     },
   });
 }
+
+const swipeGenerations = () => {
+  const title = document.querySelector(".section9__title").textContent;
+  const beforeEl = document.querySelector(".section9__info");
+
+  if (title === "nieuwe generatie") {
+    beforeEl.classList.add('new');
+  }
+
+  console.log(title);
+  const swiper = new Swiper(".mySwiper", {});
+};
+
 
 const init = () => {
   drawHeroimage();
   printingPress();
   passerObjects();
   rippingMoney();
+  swipeGenerations();
 }
 init();

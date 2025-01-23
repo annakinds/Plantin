@@ -513,22 +513,124 @@ img {
   z-index: -2;
 }
 
-.section8__text {
+#section8 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  
+}
+
+.section8__photos{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-content:space-between ;
 }
 
-.section8__text1 {
-  max-width: 10rem;
-}
-
-.section8__text2 {
-  max-width: 10rem;
+.section8__photo1 {
+  margin-top: 1rem;
 }
 
 .section8__photo2 {
   margin-top: -4rem;
   margin-bottom: 14rem;
+}
+
+.section8__text {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  margin: var(--s1);
+}
+
+.section8__text1 {
+  min-width: 10rem;
+  margin-top: 3rem;
+}
+
+.section8__text2 {
+  margin-top: 5rem;
+  min-width: 10rem;
+  margin-left: var(--s1);
+}
+
+.swiper-slide{
+  display: grid;
+  grid-template-rows: 2fr 3fr 2fr;
+  grid-template-columns: auto;
+  height: 30rem;
+}
+
+section {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section9__title {
+  grid-row: 1;
+  grid-column: 1;
+  color: var(--orange);
+  z-index: 2;
+  font-size: var(--fs-l);
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 10rem;
+  line-height: 1.4;
+  padding-left: var(--s1);
+  margin-top: -0.8rem;
+}
+
+.section9__image {
+  grid-row: 1/span 2;
+  grid-column: 1;
+  z-index: 1;
+  display: flex;
+  align-self: center;
+}
+
+.section9__text {
+  grid-row: 2;
+  grid-column: 1;
+  z-index: 1;
+  background-color: var(--white);
+  margin: var(--s_1);
+  padding: var(--s1);
+}
+
+br{
+  height: 0.5rem;
+}
+
+.section9__info {
+  grid-row: 3;
+  grid-column: 1;
+  text-align: center;
+  max-width: 15rem;
+  padding: var(--s1);
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+}
+
+.section9__info::before{
+  content: "𒊹 ●";
+  width: 3rem;
+  color: var(--white);
+  background-color: var(--orange);
+  padding: var(--s_2);
+  display: block;
+  margin-bottom: var(--s_1);
+  border-radius: 1rem;
+  justify-self: center;
+}
+
+.section9__info.new::before {
+  content: "● 𒊹";
 }
 
 footer {
