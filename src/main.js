@@ -18,6 +18,7 @@ const drawHeroimage = () => {
       end: "10% top",
       // markers: true,
       scrub: true,
+      toggleActions: "play pause resume reset",
     },
   });
 }
@@ -55,6 +56,52 @@ const printingPress = () => {
   });
 }
 
+const religiousUnrest = () => {
+  // const protestants = document.querySelector(".section5__word1");
+  // const versus = document.querySelector(".section5__word2");
+  // const catholics = document.querySelector(".section5__word3");
+
+  gsap.set(".section5__word1",{x:-350});
+  gsap.set(".section5__word2", { opacity: 0 });
+  gsap.set(".section5__word3", { x: 300 });
+
+  gsap.to(".section5__word1", {
+    x: 0,
+    scrollTrigger: {
+      trigger: "#section5",
+      start: "top bottom",
+      end: "top top",
+      markers: true,
+      scrub: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+
+  gsap.to(".section5__word2", {
+    opacity: 0.2,
+    scrollTrigger: {
+      trigger: "#section5",
+      start: "top bottom",
+      end: "top top",
+      markers: true,
+      scrub: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+
+  gsap.to(".section5__word3", {
+    x: 0,
+    scrollTrigger: {
+      trigger: "#section5",
+      start: "top bottom",
+      end: "top top",
+      markers: true,
+      scrub: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+}
+
 const passerObjects = () => {
   const images = document.querySelectorAll('.section6__img img:not(.passer');
 
@@ -74,6 +121,7 @@ const rippingMoney = () => {
       end: "bottom center",
       // markers: true,
       scrub: true,
+      toggleActions: "play pause resume reset",
     },
   });
   gsap.to(".section8__photo1", {
@@ -84,6 +132,7 @@ const rippingMoney = () => {
       end: "bottom center",
       // markers: true,
       scrub: true,
+      toggleActions: "play pause resume reset",
     },
   });
 }
@@ -104,6 +153,7 @@ const swipeGenerations = () => {
 const init = () => {
   drawHeroimage();
   printingPress();
+  religiousUnrest();
   passerObjects();
   rippingMoney();
   swipeGenerations();
