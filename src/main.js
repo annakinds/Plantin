@@ -1,5 +1,9 @@
 import './reset.css';
 import './style.css';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import Sortable from 'sortablejs';
 import Swiper from 'swiper';
 
@@ -8,9 +12,9 @@ const drawHeroimage = () => {
     x: -270,
     willChange: "transform",
     scrollTrigger: {
-      trigger: "body",
-      pin: "body",
-      start: "top top",
+      trigger: ".heroimg__photo2",
+      pin: "main",
+      start: "top center",
       end: "10% top",
       // markers: true,
       scrub: true,

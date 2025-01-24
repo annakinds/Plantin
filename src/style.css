@@ -468,7 +468,7 @@ img {
 
 .section7__photo::before {
   content: '';
-  background-image: url('./src/assets/img/png/bibliaborder_horizontal_mobile.png');
+  background-image: url('./assets/img/png/bibliaborder_horizontal_mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
@@ -517,16 +517,16 @@ img {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  
+
 }
 
-.section8__photos{
+.section8__photos {
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-content:space-between ;
+  align-content: space-between;
 }
 
 .section8__photo1 {
@@ -558,7 +558,7 @@ img {
   margin-left: var(--s1);
 }
 
-.swiper-slide{
+.swiper-slide {
   display: grid;
   grid-template-rows: 2fr 3fr 2fr;
   grid-template-columns: auto;
@@ -600,7 +600,7 @@ section {
   padding: var(--s1);
 }
 
-br{
+br {
   height: 0.5rem;
 }
 
@@ -617,7 +617,7 @@ br{
   align-self: center;
 }
 
-.section9__info::before{
+.section9__info::before {
   content: "𒊹 ●";
   width: 3rem;
   color: var(--white);
