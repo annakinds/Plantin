@@ -14,6 +14,18 @@
   <title>Christoffel Plantijn</title>
 </head>
 
+<svg style="display:none">
+  <symbol id="navicon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M21 11h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1h18c0.6 0 1-0.4 1-1s-0.4-1-1-1z"></path>
+    <path d="M3 7h18c0.6 0 1-0.4 1-1s-0.4-1-1-1h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1z"></path>
+    <path d="M21 17h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1h18c0.6 0 1-0.4 1-1s-0.4-1-1-1z"></path>
+  </symbol>
+  <symbol id="close" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.1,17.7L6.3,4.9c-.4-.4-1-.4-1.4,0s-.4,1,0,1.4l12.7,12.7c.4.4,1,.4,1.4,0s.4-1,0-1.4Z" />
+    <path d="M6.3,19.1l12.7-12.7c.4-.4.4-1,0-1.4s-1-.4-1.4,0l-12.7,12.7c-.4.4-.4,1,0,1.4s1,.4,1.4,0Z" />
+  </symbol>
+</svg>
+
 <body>
   <!-- <picture>
     <source srcset="./src/assets/img/portret_plantin.avif" type="image/avif" />
@@ -21,34 +33,45 @@
   </picture> -->
   <header>
     <h1 class="hidden">Christoffel Plantijn</h1>
-    <nav>
-      <ul>
-        <li>
-          <a class="nav__item" href="#section1">een man met een missie</a>
+    <nav class="nav">
+      <button class="nav__button hidden" aria-label="Navigation menu" aria-expanded="false" aria-controls="nav__list">
+        <svg role="img" aria-labelledby="svg-title" focusable="false">
+          <title id="svg-title">Menu</title>
+          <use id="iconlink" xlink:href="#navicon"></use>
+        </svg>
+      </button>
+      <div class="nav__middle"> 
+        <img class="nav__logo" src="./src/assets/img/png/logo_small.png" alt="logo">
+        <h2 class="nav__title hidden">tussentitel</h2>
+      </div>
+      <button class="nav__tickets">tickets</button>
+      <ul class="nav__list lineh__big" id="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#section1">een man met een missie</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section2">een visionair met lef</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section2">een visionair met lef</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section3">een pionier in educatie en familieambitie</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section3">een inkijk in de drukpers</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section4">een man die kracht maakte van uitdagingen</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section3">een pionier in educatie en familieambitie</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section5">een leven in balans en beweging</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section4">een man die kracht maakte van uitdagingen</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section6">een visionair meesterwerk voor de wereld</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section5">een leven in balans en beweging</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section7">een brug tussen religie en wetenschap</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section6">een visionair meesterwerk voor de wereld</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section8">een meester in samenwerking en strategie</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section8">een meester in samenwerking en strategie</a>
         </li>
-        <li>
-          <a class="nav__item" href="#section9">een nalatenschap van innovatie en vakmanschap</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#section9">een nalatenschap van innovatie en vakmanschap</a>
         </li>
       </ul>
     </nav>
@@ -125,12 +148,13 @@
       <p class="section5__word1">protestanten</p>
       <p class="section5__word2">versus</p>
       <div class="section5__text">
-      <p class="section5__text1 lineh__big">Christoffel Plantin bouwde zijn succes in <span
-          class="keyword__whitebg">Antwerpen</span> te midden van <span class="keyword__whitebg">religieuze
-          onrust</span> tussen katholieken en protestanten.</p>
-      <p class="section5__text2 lineh__big">Ondanks de risico’s bleef hij vastberaden en <span class="keyword__whitebg">volhardend werken</span> aan zijn
-        droom. Zijn verhaal toont hoe veerkracht en
-        toewijding zelfs in moeilijke tijden tot succes kunnen leiden.</p>
+        <p class="section5__text1 lineh__big">Christoffel Plantin bouwde zijn succes in <span
+            class="keyword__whitebg">Antwerpen</span> te midden van <span class="keyword__whitebg">religieuze
+            onrust</span> tussen katholieken en protestanten.</p>
+        <p class="section5__text2 lineh__big">Ondanks de risico’s bleef hij vastberaden en <span
+            class="keyword__whitebg">volhardend werken</span> aan zijn
+          droom. Zijn verhaal toont hoe veerkracht en
+          toewijding zelfs in moeilijke tijden tot succes kunnen leiden.</p>
       </div>
       <p class="section5__word3">katholieken</p>
     </section>

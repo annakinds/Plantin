@@ -47,6 +47,127 @@ img {
   height: auto;
 }
 
+/* hamburgermenu */
+
+.nav a:any-link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  margin: 0 auto 1rem auto;
+  max-width: 70rem;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--s1) 0rem;
+  z-index: 20;
+}
+
+.nav__middle {
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__logo {
+  width: 3rem;
+}
+
+.nav__tickets {
+  border: 0;
+  background-color: var(--orange_light);
+  color: var(--white);
+  display: flex;
+  padding: var(--s_1);
+  text-transform: uppercase;
+}
+
+.nav--fixed {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  padding-top: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.nav__button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  appearance: none;
+  color: var(--orange_light);
+}
+
+.nav__button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nav__item {
+  border-top: solid 1px var(--black);
+}
+
+.nav__item:last-of-type {
+  border-bottom: solid 1px --black;
+}
+
+.nav__link {
+  display: block;
+  padding: .5em;
+}
+
+.nav__link:hover {
+  background-color: var(--orange);
+}
+
+@media screen and (min-width: 45em) {
+  .nav {
+    grid-template-columns: min-content auto;
+    align-items: center;
+    gap: 1rem
+  }
+
+  .nav__title {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .nav__button {
+    display: none;
+  }
+
+  .nav__list {
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-inline-start: auto;
+  }
+
+  .nav__item,
+  .nav__item:last-of-type {
+    border: none;
+  }
+
+  .nav__link {
+    padding-inline: 2rem;
+  }
+}
+
+/* hamburgermenu(end) */
+
 .lineh__big {
   line-height: 1.4;
 }
@@ -80,6 +201,7 @@ img {
 }
 
 #heroimg {
+  padding-top: 6rem;
   display: grid;
   grid-template-columns: 2fr 0.5fr 2fr 1fr;
   grid-template-rows: 2fr 3fr 3fr 3fr;
@@ -368,7 +490,6 @@ img {
   font-size: 4rem;
   opacity: 0.2;
   text-transform: uppercase;
-  font-weight: lighter;
   display: flex;
   justify-content: center;
   align-items: center;

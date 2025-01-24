@@ -7,14 +7,73 @@ gsap.registerPlugin(ScrollTrigger);
 import Sortable from 'sortablejs';
 import Swiper from 'swiper';
 
+const $nav = document.querySelector('.nav');
+const $navButton = document.querySelector('.nav__button');
+const $navList = document.querySelector('.nav__list');
+const $iconLink = document.querySelector('#iconlink');
+const listItems = $navList.querySelectorAll("li a");
+const middle = document.querySelector(".nav__middle");
+const tickets = document.querySelector(".nav__tickets");
+
+console.log(tickets)
+const openNavigation = () => {
+  $navButton.setAttribute("aria-expanded", "true");
+  $iconLink.setAttribute("xlink:href", "#close");
+  $navList.classList.remove("hidden");
+  $nav.classList.add('nav--fixed');
+  tickets.classList.add("hidden");
+  middle.classList.add("hidden");
+
+}
+
+const closeNavigation = () => {
+  $navButton.setAttribute("aria-expanded", "false");
+  $iconLink.setAttribute("xlink:href", "#navicon");
+  $navList.classList.add("hidden");
+  $nav.classList.remove('nav--fixed');
+  tickets.classList.remove("hidden");
+  middle.classList.remove("hidden");
+}
+
+const toggleNavigation = () => {
+  const open = $navButton.getAttribute("aria-expanded");
+  open === "false" ? openNavigation() : closeNavigation();
+}
+
+
+const handleBlur = () => {
+  //if (!event.relatedTarget || !$navList.contains(event.relatedTarget)) {
+  closeNavigation();
+  //}
+}
+
+const drawHamburgerMenu = () => {
+  $navButton.classList.remove('hidden');
+  $navList.classList.add("hidden");
+
+  $navButton.addEventListener("click", toggleNavigation);
+
+  // add event to the last item in the nav list to trigger the disclosure to close if the user tabs out of the disclosure
+  listItems[listItems.length - 1].addEventListener("blur", handleBlur);
+
+  // Close the disclosure if a user presses the escape key
+  window.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      $navButton.focus();
+      closeNavigation();
+    }
+  });
+}
+
+
 const drawHeroimage = () => {
   gsap.to(".heroimg__photo2", {
     x: -270,
-    willChange: "transform",
+    duration: 1,
     scrollTrigger: {
-      trigger: ".heroimg__photo2",
+      trigger: "body",
       pin: "main",
-      start: "top center",
+      start: "top top",
       end: "10% top",
       // markers: true,
       scrub: true,
@@ -37,11 +96,11 @@ const feedbackPrintingPress = () => {
 
   correctOrder.forEach((text, index) => {
     if (step.children[index].textContent.trim() === text) {
-      step.children[index].classList.remove('wrong'); 
-      step.children[index].classList.add('right'); 
+      step.children[index].classList.remove('wrong');
+      step.children[index].classList.add('right');
     } else {
-      step.children[index].classList.remove('right'); 
-      step.children[index].classList.add('wrong'); 
+      step.children[index].classList.remove('right');
+      step.children[index].classList.add('wrong');
     }
   });
 };
@@ -51,55 +110,51 @@ const printingPress = () => {
     group: 'section3__list',
     animation: 150,
     onEnd: () => {
-      feedbackPrintingPress(); 
+      feedbackPrintingPress();
     },
   });
 }
 
 const religiousUnrest = () => {
-  // const protestants = document.querySelector(".section5__word1");
-  // const versus = document.querySelector(".section5__word2");
-  // const catholics = document.querySelector(".section5__word3");
-
-  gsap.set(".section5__word1",{x:-350});
-  gsap.set(".section5__word2", { opacity: 0 });
-  gsap.set(".section5__word3", { x: 300 });
-
+  gsap.set(".section5__word1", { x: -350 });
   gsap.to(".section5__word1", {
     x: 0,
     scrollTrigger: {
       trigger: "#section5",
       start: "top bottom",
-      end: "top top",
-      markers: true,
+      end: "center center",
+      // markers: true,
       scrub: true,
       toggleActions: "play pause resume reset",
     },
   });
 
+  gsap.set(".section5__word2", { opacity: 0 });
   gsap.to(".section5__word2", {
     opacity: 0.2,
     scrollTrigger: {
       trigger: "#section5",
       start: "top bottom",
-      end: "top top",
-      markers: true,
+      end: "center center",
+      // markers: true,
       scrub: true,
       toggleActions: "play pause resume reset",
     },
   });
 
+  gsap.set(".section5__word3", { x: 300 });
   gsap.to(".section5__word3", {
     x: 0,
     scrollTrigger: {
       trigger: "#section5",
       start: "top bottom",
-      end: "top top",
-      markers: true,
+      end: "center center",
+      // markers: true,
       scrub: true,
       toggleActions: "play pause resume reset",
     },
   });
+
 }
 
 const passerObjects = () => {
@@ -107,7 +162,7 @@ const passerObjects = () => {
 
   images.forEach(image => {
     image.addEventListener('click', () => {
-      image.classList.add('hidden'); 
+      image.classList.add('hidden');
     });
   });
 }
@@ -144,13 +199,12 @@ const swipeGenerations = () => {
   if (title === "nieuwe generatie") {
     beforeEl.classList.add('new');
   }
-
-  console.log(title);
   const swiper = new Swiper(".mySwiper", {});
 };
 
 
 const init = () => {
+  drawHamburgerMenu();
   drawHeroimage();
   printingPress();
   religiousUnrest();
