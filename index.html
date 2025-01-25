@@ -32,7 +32,7 @@
     <img src="./src/assets/img/portret_plantin.png" alt="" />
   </picture> -->
   <header>
-    <h1 class="hidden">Christoffel Plantijn</h1>
+    <h1 class="hidden" id="top">Christoffel Plantijn</h1>
     <nav class="nav">
       <button class="nav__button hidden" aria-label="Navigation menu" aria-expanded="false" aria-controls="nav__list">
         <svg role="img" aria-labelledby="svg-title" focusable="false">
@@ -40,41 +40,47 @@
           <use id="iconlink" xlink:href="#navicon"></use>
         </svg>
       </button>
-      <div class="nav__middle"> 
+      <div class="nav__middle">
         <img class="nav__logo" src="./src/assets/img/png/logo_small.png" alt="logo">
-        <h2 class="nav__title hidden">tussentitel</h2>
       </div>
       <button class="nav__tickets">tickets</button>
       <ul class="nav__list lineh__big" id="nav__list">
         <li class="nav__item">
-          <a class="nav__link" href="#section1">een man met een missie</a>
+          <a class="nav__link" href="/#section1">een man met een missie</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section2">een visionair met lef</a>
+          <a class="nav__link" href="/#section2">een visionair met lef</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section3">een inkijk in de drukpers</a>
+          <a class="nav__link" href="/#section3">een inkijk in de drukpers</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section3">een pionier in educatie en familieambitie</a>
+          <a class="nav__link" href="/#section3">een pionier in educatie en familieambitie</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section4">een man die kracht maakte van uitdagingen</a>
+          <a class="nav__link" href="/#section4">een man die kracht maakte van uitdagingen</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section5">een leven in balans en beweging</a>
+          <a class="nav__link" href="/#section5">een leven in balans en beweging</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section6">een visionair meesterwerk voor de wereld</a>
+          <a class="nav__link" href="/#section6">een visionair meesterwerk voor de wereld</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section8">een meester in samenwerking en strategie</a>
+          <a class="nav__link" href="/#section7">een meester in samenwerking en strategie</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#section9">een nalatenschap van innovatie en vakmanschap</a>
+          <a class="nav__link" href="/#section8">een nalatenschap van innovatie en vakmanschap</a>
         </li>
       </ul>
     </nav>
+    <!-- <div>
+      <a class="nav__totop" href="#top">⬆</a>
+      <div class="nav__middle">
+      <h2 class="nav__title hidden">tussentitel</h2>
+      </div>
+      <button class="nav__tickets">tickets</button>
+    </div> -->
   </header>
   <main>
     <section id="heroimg">
@@ -91,22 +97,47 @@
     </section>
     <section id="section1">
       <h2 class="section1__title">Plantijn</h2>
-      <p class="section1__text1 lineh__big"><span class="elegantBig">I</span>n mei 1520 werd Christoffel Plantijn
-        geboren in het Franse Saint-Avertin. Zijn jeugd was zwaar: op 14-jarige leeftijd verloor hij beide ouders. Toch
-        vond hij
-        kracht in zijn passie voor boeken. Als <span class="keyword__darkbg">boekbinder</span> leerde hij precisie en
-        perfectie, wat de basis vormde voor zijn
-        toekomstige succes in de drukkunst.</p>
-      <div class="section1__text2">
+      <div class="section1__text1 mobile">
+        <p class="lineh__big"><span class="elegantBig">I</span>n mei 1520 werd Christoffel Plantijn
+          geboren in het Franse Saint-Avertin. Zijn jeugd was zwaar: op 14-jarige leeftijd verloor hij beide ouders.
+          Toch
+          vond hij
+          kracht in zijn passie voor boeken. Als <span class="keyword__darkbg">boekbinder</span> leerde hij precisie en
+          perfectie, wat de basis vormde voor zijn
+          toekomstige succes in de drukkunst.</p>
+      </div>
+      <div class="section1__text1 desktop">
+        <p class="lineh__big section1__text1-1"><span class="elegantBig">I</span>n mei 1520 werd Christoffel
+          Plantijn geboren in het Franse dorp Saint-Avertin. Zijn jeugd was zwaar. Op 14-jarige leeftijd <span
+            class="keyword__darkbg">verloor hij
+            beide ouders</span>.
+          Maar waar velen zouden breken, vond Plantijn kracht. Gedreven door een onverwoestbare wil om grootse dingen te
+          bereiken,
+          ontdekte hij al snel zijn <span class="keyword__darkbg">passie voor boeken</span>.</p>
+      </div>
+      <div class="section1__text2 mobile">
         <p class="lineh__big">Ondanks tegenslagen bleef Plantijn gedreven. Met <span class="keyword__whitebg">passie
             en doorzettingsvermogen</span> bouwde hij een nalatenschap op die de
           kracht van het geschreven woord voor altijd veranderde.</p>
+      </div>
+      <div class="section1__text2 desktop">
+        <p class="lineh__big">Zijn liefde voor het boekenvak werd zijn redding.
+          Als <span class="keyword__whitebg">boekbinder</span> leerde hij precisie en perfectie waarderen, eigenschappen
+          die hem voorbereidden op een baanbrekende
+          toekomst in de drukkunst.</p>
+      </div>
+      <div class="section1__text3 desktop">
+        <p class="section1__text3-1 caps lineh__small">Tegenslag hield hem niet tegen.
+          <br>Het voedde zijn ambitie.</p>
+        <p class="section1__text3-2 lineh__big">Zijn verhaal is er een van passie, doorzettingsvermogen en een
+          onwankelbaar geloof in de <span class="keyword__whitebg">kracht van het geschreven woord.</span></p>
       </div>
       <img class="section1__img" src="./src/assets/img/png/plantin_tornface.png" alt="Plantijn">
     </section>
     <section id="section2">
       <h2 class="hidden">Uitgeverij</h2>
-      <p class="section2__text lineh__big"><span class="elegantSmall keyword__whitebg">Johanna Riviere</span>, de vrouw
+      <p class="section2__text lineh__big mobile"><span class="elegantSmall keyword__whitebg">Johanna Riviere</span>, de
+        vrouw
         die zijn
         partner werd in liefde en ambitie, ontmoette Plantijn in Frankrijk. Op 30-jarige
         leeftijd verhuisde hij naar <span class="keyword__whitebg">Antwerpen</span>, waar hij in 1555 de Plantijnse
@@ -114,6 +145,16 @@
         verspreiden. De <span class="keyword__whitebg">drukkerij</span> groeide uit tot een internationaal icoon en
         bleef drie eeuwen actief, een nalatenschap die
         generaties blijft inspireren.</p>
+      <div class="section2__text desktop">
+        <p class="section2__text1 lineh__big">In Frankrijk ontmoette Plantijn <span class="elegantSmall">Johanna
+            Riviere</span>, zijn partner in liefde en ambitie. Op 30-jarige leeftijd verhuisde hij
+          naar Antwerpen, een stad vol handel en cultuur, ideaal voor zijn droom.</p>
+        <p class="section2__text2 lineh__big">In 1555 richtte hij de Plantijnse Drukkerij op, met als doel verhalen te
+          verspreiden en kennis te delen.
+          De drukkerij groeide uit tot een internationale krachtpatser en bleef meer dan drie eeuwen actief. Plantins
+          nalatenschap
+          inspireert generaties.</p>
+      </div>
     </section>
     <section id="section3">
       <h2 class="section3__title">Ga de challenge aan!</h2>

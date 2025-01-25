@@ -15,7 +15,6 @@ const listItems = $navList.querySelectorAll("li a");
 const middle = document.querySelector(".nav__middle");
 const tickets = document.querySelector(".nav__tickets");
 
-console.log(tickets)
 const openNavigation = () => {
   $navButton.setAttribute("aria-expanded", "true");
   $iconLink.setAttribute("xlink:href", "#close");
@@ -23,7 +22,6 @@ const openNavigation = () => {
   $nav.classList.add('nav--fixed');
   tickets.classList.add("hidden");
   middle.classList.add("hidden");
-
 }
 
 const closeNavigation = () => {
@@ -52,10 +50,8 @@ const drawHamburgerMenu = () => {
   $navList.classList.add("hidden");
 
   $navButton.addEventListener("click", toggleNavigation);
-
   // add event to the last item in the nav list to trigger the disclosure to close if the user tabs out of the disclosure
   listItems[listItems.length - 1].addEventListener("blur", handleBlur);
-
   // Close the disclosure if a user presses the escape key
   window.addEventListener("keyup", (e) => {
     if (e.key === "Escape") {
@@ -67,19 +63,19 @@ const drawHamburgerMenu = () => {
 
 
 const drawHeroimage = () => {
-  gsap.to(".heroimg__photo2", {
-    x: -270,
-    duration: 1,
-    scrollTrigger: {
-      trigger: "body",
-      pin: "main",
-      start: "top top",
-      end: "10% top",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
-  });
+  // gsap.to(".heroimg__photo2", {
+  //   x: -270,
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: "body",
+  //     pin: "main",
+  //     start: "top top",
+  //     end: "10% top",
+  //     // markers: true,
+  //     scrub: true,
+  //     toggleActions: "play pause resume reset",
+  //   },
+  // });
 }
 
 const step = document.getElementById("section3__list");
