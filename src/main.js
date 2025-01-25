@@ -61,6 +61,131 @@ const drawHamburgerMenu = () => {
   });
 }
 
+const drawSubtitle = () => {
+  gsap.to(".nav__middle", {
+    innerHTML: '        <img class="nav__logo" src="./src/assets/img/png/logo_small.png" alt="logo">',
+    scrollTrigger: {
+      trigger: "#heroimg",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een man met een missie",
+    scrollTrigger: {
+      trigger: "#section1",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een visionair met lef",
+    scrollTrigger: {
+      trigger: "#section2",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een inkijk in de drukpers",
+    scrollTrigger: {
+      trigger: "#section3",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een pionier in educatie en familieambitie",
+    scrollTrigger: {
+      trigger: "#section4",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een man die kracht maakte van uitdagingen",
+    scrollTrigger: {
+      trigger: "#section5",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een leven in balans en beweging",
+    scrollTrigger: {
+      trigger: "#section6",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een visionair meesterwerk voor de wereld",
+    scrollTrigger: {
+      trigger: "#section7",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een meester in samenwerking en strategie",
+    scrollTrigger: {
+      trigger: "#section8",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    textContent: "een nalatenschap van innovatie en vakmanschap",
+    scrollTrigger: {
+      trigger: "#section9",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".nav__middle", {
+    innerHTML: '<img class="nav__logo" src="./src/assets/img/png/logo_small.png" alt="logo">',
+    scrollTrigger: {
+      trigger: "footer",
+      scrub: 0.2,
+      start: "top bottom",
+      end: "bottom bottom",
+      // markers: true,
+      toggleActions: "play pause resume reset",
+    },
+  });
+
+}
+
 
 const drawHeroimage = () => {
   // gsap.to(".heroimg__photo2", {
@@ -201,6 +326,7 @@ const swipeGenerations = () => {
 
 const init = () => {
   drawHamburgerMenu();
+  drawSubtitle();
   drawHeroimage();
   printingPress();
   religiousUnrest();
