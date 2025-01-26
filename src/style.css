@@ -750,6 +750,48 @@ header {
   padding: var(--s1);
 }
 
+@media (min-width: 425px) {
+
+  .section4__text1,
+  .section4__text2 {
+    max-width: 20rem;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  #section4 {
+    background-image: url(./assets/img/png/daughter.png);
+    background-size: cover;
+    height: 50rem;
+    flex-direction: row;
+    align-content: center;
+    padding: 0rem;
+  }
+
+  .section4__word {
+    transform: rotate(270deg);
+    font-size: 6rem;
+    color: #AD2D00;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    padding-bottom: 15rem;
+  }
+
+  .section4__text1 {
+    margin-left: -15rem;
+    margin-top: 5rem;
+    max-width: 20rem;
+  }
+
+  .section4__text2 {
+    max-width: 25rem;
+    margin-left: 25rem;
+    margin-top: 15rem;
+  }
+}
+
 #section5 {
   background-color: var(--beige);
   padding: var(--s1) 0rem;
@@ -798,6 +840,50 @@ header {
 .section5__text1,
 .section5__text2 {
   padding: var(--s_1) var(--s1);
+}
+
+@media (min-width: 1440px) {
+  .section5__text {
+    display: flex;
+    flex-direction: column;
+    padding: var(--s1);
+
+  }
+
+  .section5__text::before{
+    content: url(./assets/img/png/p_vs_k.png);
+    opacity: 0.45;
+    margin-bottom: -27rem;
+    margin-left: -2rem;
+  }
+
+  .section5__text1,
+  .section5__text2 {
+    max-width: 35rem;
+    padding-left: 15rem;
+  }
+
+  .section5__text2{
+    padding-bottom: 5rem;
+  }
+
+  .section5__text3,
+  .section5__text4 {
+    max-width: 40rem;
+    align-self: center;
+    padding: var(--s_1);
+    padding-left: 10rem;
+  }
+
+  .section5__word1, .section5__word2, .section5__word3{
+    justify-self: end;
+    font-size: 6rem;
+  }
+
+  .section5__word2 {
+    padding-right: 15rem;
+  }
+
 }
 
 #section6 {

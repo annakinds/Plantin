@@ -190,7 +190,7 @@ const drawSubtitle = () => {
 
 
 const drawHeroimage = () => {
-  mm.add("(min-width: 319px)", () => {
+  mm.add("(min-width: 320px)", () => {
     gsap.to(".heroimg__photo2", {
       x: -240,
       duration: 1,
@@ -251,43 +251,86 @@ const printingPress = () => {
 
 
 const religiousUnrest = () => {
-  gsap.set(".section5__word1", { x: -350 });
-  gsap.to(".section5__word1", {
-    x: 0,
-    scrollTrigger: {
-      trigger: "#section5",
-      start: "top bottom",
-      end: "center center",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
-  });
+  mm.add("(min-width: 320px)", () => {
+    gsap.set(".section5__word1", { x: "-100%" });
+    gsap.to(".section5__word1", {
+      x: 0,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
 
-  gsap.set(".section5__word2", { opacity: 0 });
-  gsap.to(".section5__word2", {
-    opacity: 0.2,
-    scrollTrigger: {
-      trigger: "#section5",
-      start: "top bottom",
-      end: "center center",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
-  });
+    gsap.set(".section5__word2", { opacity: 0 });
+    gsap.to(".section5__word2", {
+      opacity: 0.2,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
 
-  gsap.set(".section5__word3", { x: 300 });
-  gsap.to(".section5__word3", {
-    x: 0,
-    scrollTrigger: {
-      trigger: "#section5",
-      start: "top bottom",
-      end: "center center",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
+    gsap.set(".section5__word3", { x: "100%" });
+    gsap.to(".section5__word3", {
+      x: 0,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
+  });
+  mm.add("(min-width: 1440px)", () => {
+    gsap.set(".section5__word1", { x: "100%" });
+    gsap.to(".section5__word1", {
+      x: 0,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
+
+    gsap.set(".section5__word2", { opacity: 0 });
+    gsap.to(".section5__word2", {
+      opacity: 0.2,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
+
+    gsap.set(".section5__word3", { x: "100%" });
+    gsap.to(".section5__word3", {
+      x: 0,
+      scrollTrigger: {
+        trigger: "#section5",
+        start: "top bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+
+    });
   });
 
 }
