@@ -7,6 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 import Sortable from 'sortablejs';
 import Swiper from 'swiper';
 
+let mm = gsap.matchMedia();
+
 const $nav = document.querySelector('.nav');
 const $navButton = document.querySelector('.nav__button');
 const $navList = document.querySelector('.nav__list');
@@ -188,19 +190,24 @@ const drawSubtitle = () => {
 
 
 const drawHeroimage = () => {
-  // gsap.to(".heroimg__photo2", {
-  //   x: -270,
-  //   duration: 1,
-  //   scrollTrigger: {
-  //     trigger: "body",
-  //     pin: "main",
-  //     start: "top top",
-  //     end: "10% top",
-  //     // markers: true,
-  //     scrub: true,
-  //     toggleActions: "play pause resume reset",
-  //   },
-  // });
+  mm.add("(min-width: 319px)", () => {
+    gsap.to(".heroimg__photo2", {
+      x: -240,
+      duration: 1,
+    });
+  });
+  mm.add("(min-width: 768px)", () => {
+    gsap.to(".heroimg__photo2", {
+      x: -350,
+      duration: 1,
+    });
+  });
+  mm.add("(min-width: 1440px)", () => {
+    gsap.to(".heroimg__photo2", {
+      x: -800,
+      duration: 1,
+    });
+  });
 }
 
 const step = document.getElementById("section3__list");
@@ -227,14 +234,21 @@ const feedbackPrintingPress = () => {
 };
 
 const printingPress = () => {
-  Sortable.create(step, {
-    group: 'section3__list',
-    animation: 150,
-    onEnd: () => {
-      feedbackPrintingPress();
-    },
+  mm.add("(min-width: 319px)", () => {
+    Sortable.create(step, {
+      group: 'section3__list',
+      animation: 150,
+      onEnd: () => {
+        feedbackPrintingPress();
+      },
+    });
+  });
+
+  mm.add("(min-width: 1440px)", () => {
+
   });
 }
+
 
 const religiousUnrest = () => {
   gsap.set(".section5__word1", { x: -350 });
