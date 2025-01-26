@@ -323,13 +323,12 @@ const religiousUnrest = () => {
       x: 0,
       scrollTrigger: {
         trigger: "#section5",
-        start: "top bottom",
-        end: "center center",
+        start: "top center",
+        end: "bottom center",
         // markers: true,
         scrub: true,
         toggleActions: "play pause resume reset",
       },
-
     });
   });
 
@@ -346,27 +345,53 @@ const passerObjects = () => {
 }
 
 const rippingMoney = () => {
-  gsap.to(".section8__photo2", {
-    y: +200,
-    scrollTrigger: {
-      trigger: ".section8__photo1",
-      start: "start bottom",
-      end: "bottom center",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
+  mm.add("(min-width: 320px)", () => {
+    gsap.to(".section8__photo2", {
+      y: +200,
+      scrollTrigger: {
+        trigger: ".section8__photos",
+        start: "start bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
+    gsap.to(".section8__photo1", {
+      y: -50,
+      scrollTrigger: {
+        trigger: ".section8__photos",
+        start: "start bottom",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
   });
-  gsap.to(".section8__photo1", {
-    y: -50,
-    scrollTrigger: {
-      trigger: ".section8__photo1",
-      start: "start bottom",
-      end: "bottom center",
-      // markers: true,
-      scrub: true,
-      toggleActions: "play pause resume reset",
-    },
+  mm.add("(min-width: 1440px)", () => {
+    gsap.to(".section8__photo2", {
+      y: +200,
+      scrollTrigger: {
+        trigger: ".section8__photos",
+        start: "start center",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
+    gsap.to(".section8__photo1", {
+      y: -50,
+      scrollTrigger: {
+        trigger: ".section8__photos",
+        start: "start center",
+        end: "center center",
+        // markers: true,
+        scrub: true,
+        toggleActions: "play pause resume reset",
+      },
+    });
   });
 }
 
@@ -378,8 +403,7 @@ const swipeGenerations = () => {
     beforeEl.classList.add('new');
   }
   const swiper = new Swiper(".mySwiper", {});
-};
-
+}
 
 const init = () => {
   drawHamburgerMenu();
