@@ -69,8 +69,6 @@ img {
   align-items: center;
   padding: var(--s1) 0rem;
   z-index: 22;
-  /* top: 0;
-  left: 0; */
 }
 
 .nav__middle {
@@ -575,7 +573,6 @@ header {
 .section3__list-item::after {
   content: '';
   color: var(--white);
-  /* background-color: var(--black); */
   padding: var(--s_1);
   border-radius: 100%;
   width: var(--s1);
@@ -924,7 +921,6 @@ header {
 .section6__text {
   display: flex;
   flex-direction: column;
-  /* width: 30rem; */
   max-width: 14rem;
 }
 

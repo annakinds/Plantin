@@ -40,11 +40,8 @@ const toggleNavigation = () => {
   open === "false" ? openNavigation() : closeNavigation();
 }
 
-
 const handleBlur = () => {
-  //if (!event.relatedTarget || !$navList.contains(event.relatedTarget)) {
   closeNavigation();
-  //}
 }
 
 const drawHamburgerMenu = () => {
@@ -52,9 +49,7 @@ const drawHamburgerMenu = () => {
   $navList.classList.add("hidden");
 
   $navButton.addEventListener("click", toggleNavigation);
-  // add event to the last item in the nav list to trigger the disclosure to close if the user tabs out of the disclosure
   listItems[listItems.length - 1].addEventListener("blur", handleBlur);
-  // Close the disclosure if a user presses the escape key
   window.addEventListener("keyup", (e) => {
     if (e.key === "Escape") {
       $navButton.focus();
@@ -185,9 +180,7 @@ const drawSubtitle = () => {
       toggleActions: "play pause resume reset",
     },
   });
-
 }
-
 
 const drawHeroimage = () => {
   mm.add("(min-width: 320px)", () => {
@@ -248,7 +241,6 @@ const printingPress = () => {
 
   });
 }
-
 
 const religiousUnrest = () => {
   mm.add("(min-width: 320px)", () => {
@@ -336,7 +328,6 @@ const religiousUnrest = () => {
 
 const passerObjects = () => {
   const images = document.querySelectorAll('.section6__img img:not(.passer');
-
   images.forEach(image => {
     image.addEventListener('click', () => {
       image.classList.add('hidden');

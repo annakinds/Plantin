@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <link rel="icon" type="image/x-icon" href="./src/assets/img/png/plantin_fullface.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,6 @@
 </svg>
 
 <body>
-  <!-- <picture>
-    <source srcset="./src/assets/img/portret_plantin.avif" type="image/avif" />
-    <img src="./src/assets/img/portret_plantin.png" alt="" />
-  </picture> -->
   <header>
     <h1 class="hidden" id="top">Christoffel Plantijn</h1>
     <nav class="nav">
@@ -40,9 +36,7 @@
           <use id="iconlink" xlink:href="#navicon"></use>
         </svg>
       </button>
-      <div class="nav__middle">
-        <!-- <img class="nav__logo" src="./src/assets/img/png/logo_small.png" alt="logo"> -->
-      </div>
+      <div class="nav__middle"></div>
       <button class="nav__tickets">tickets</button>
       <ul class="nav__list lineh__big" id="nav__list">
         <li class="nav__item">
@@ -74,19 +68,17 @@
         </li>
       </ul>
     </nav>
-    <!-- <div>
-      <a class="nav__totop" href="#top">⬆</a>
-      <div class="nav__middle">
-      <h2 class="nav__title hidden">tussentitel</h2>
-      </div>
-      <button class="nav__tickets">tickets</button>
-    </div> -->
   </header>
   <main>
     <section id="heroimg">
       <h2 class="heroimg__title">Laat je inspireren door <br> <span class="elegant keyword__whitebg">Christoffel
           Plantijn</span></h2>
-      <img class="heroimg__photo1" src="./src/assets/img/png/heroimg_photo1.png" alt="Plantijn">
+      <picture class="heroimg__photo1">
+        <source sizes="81.85vw" srcset="./src/assets/img/avif/heroimg_photo1-885.avif 885w, 
+          ./src/assets/img/avif/heroimg_photo1-1571.avif 1571w, 
+          ./src/assets/img/avif/heroimg_photo1-2048.avif 2048w" type="image/avif" /> <img
+          src="./src/assets/img/png/heroimg_photo1.png" alt="Plantijn" />
+      </picture>
       <img class="heroimg__photo2" src="./src/assets/img/png/heroimg_photo2.png" alt="Plantijn">
       <div class="heroimg__text1 lineh__big mobile">
         <p>Een pionier die met <span class="keyword__whitebg">passie</span> de kracht van het
@@ -98,7 +90,10 @@
             woord</span> ontketende en de wereld veranderde</p>
       </div>
       <p class="heroimg__text2 keyword__whitebg">Verken zijn verhaal</p>
-      <img class="heroimg__photo3" src="./src/assets/img/png/heroimg_photo3.png" alt="Plantijn">
+      <picture class="heroimg__photo3">
+        <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/heroimg_photo3.png"
+          alt="Plantijn" />
+      </picture>
     </section>
     <section id="section1">
       <h2 class="section1__title">Plantijn</h2>
@@ -138,7 +133,11 @@
         <p class="section1__text3-2 lineh__big">Zijn verhaal is er een van passie, doorzettingsvermogen en een
           onwankelbaar geloof in de <span class="keyword__whitebg">kracht van het geschreven woord.</span></p>
       </div>
-      <img class="section1__img" src="./src/assets/img/png/plantin_tornface.png" alt="Plantijn">
+      <picture class="section1__img">
+        <source sizes="min-width: 1440px 45vw, (min-width: 780px) 100vw, (min-width: 400px) 160vw, calc(100vw + 228px)"
+          srcset="./src/assets/img/avif/plantin_tornface-530.avif 530w" type="image/avif" /><img
+          src="./src/assets/img/png/plantin_tornface.png" alt="Plantijn" />
+      </picture>
     </section>
     <section id="section2">
       <h2 class="hidden">Uitgeverij</h2>
@@ -250,10 +249,19 @@
     <section id="section6">
       <h2 class="hidden">passer</h2>
       <div class="section6__img">
-        <img class="passer" src="./src/assets/img/png/passer.png" alt="Passer">
-        <img class="globe" src="./src/assets/img/png/globe.png" alt="Wereldbol">
-        <img class="hourglass" src="./src/assets/img/png/hourglass.png" alt="Zandloper">
-        <img class="beer" src="./src/assets/img/png/beer.png" alt="Bier">
+        <picture class="passer">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/passer.png" alt="passer" />
+        </picture>
+        <picture class="globe">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/globe.png" alt="wereldbol" />
+        </picture>
+        <picture class="hourglass">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/hourglass.png"
+            alt="zandloper" />
+        </picture>
+        <picture class="beer">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/beer.png" alt="bier" />
+        </picture>
       </div>
       <div class="section6__text mobile">
         <p class="section6__text1 lineh__big">Het portret van Christoffel Plantin toont een passer, <span
@@ -265,17 +273,24 @@
         <button class="section6__button">Click the objects</button>
       </div>
       <div class="section6__text desktop">
-        <p class="section6__text1 lineh__big keyword__whitebg">Op het portret van Christoffel Plantin prijkt een passer, een krachtig
+        <p class="section6__text1 lineh__big keyword__whitebg">Op het portret van Christoffel Plantin prijkt een passer,
+          een krachtig
           symbool dat zijn diepgewortelde levensfilosofie
           perfect belichaamt.</p>
-        <p class="section6__text2 lineh__big">De passer staat voor <span class="keyword__whitebg">balans en vooruitgang</span>, twee kernprincipes die Plantin gedurende zijn leven naadloos wist te
-        combineren.</p>
-        <p class="section6__text3 lineh__big">Eén poot van de passer rust stevig in de kernwaarden die hem definieerden: geloof, <span class="keyword__whitebg">vakmanschap</span> en toewijding.</p>
-        <p class="section6__text4 lineh__big">Dit waren de fundamenten waarop hij zijn leven en onderneming bouwde. De andere poot reikt naar de toekomst, naar <span class="keyword__whitebg">groei</span>, die hij met durf omarmde.</p>
-        <p class="section6__text5 lineh__big">Deze metafoor weerspiegelt Plantins overtuiging dat ware grootsheid voortkomt uit een <span class="keyword__whitebg">evenwicht</span> tussen traditie en
-        vernieuwing.</p>
-        <p class="section6__text6 lineh__big">Zijn verhaal is een inspirerend testament van hoe stabiliteit en ambitie samen een onwrikbare basis vormen voor <span class="keyword__whitebg">succes</span>
-        dat de tand des tijds doorstaat.</p>
+        <p class="section6__text2 lineh__big">De passer staat voor <span class="keyword__whitebg">balans en
+            vooruitgang</span>, twee kernprincipes die Plantin gedurende zijn leven naadloos wist te
+          combineren.</p>
+        <p class="section6__text3 lineh__big">Eén poot van de passer rust stevig in de kernwaarden die hem definieerden:
+          geloof, <span class="keyword__whitebg">vakmanschap</span> en toewijding.</p>
+        <p class="section6__text4 lineh__big">Dit waren de fundamenten waarop hij zijn leven en onderneming bouwde. De
+          andere poot reikt naar de toekomst, naar <span class="keyword__whitebg">groei</span>, die hij met durf
+          omarmde.</p>
+        <p class="section6__text5 lineh__big">Deze metafoor weerspiegelt Plantins overtuiging dat ware grootsheid
+          voortkomt uit een <span class="keyword__whitebg">evenwicht</span> tussen traditie en
+          vernieuwing.</p>
+        <p class="section6__text6 lineh__big">Zijn verhaal is een inspirerend testament van hoe stabiliteit en ambitie
+          samen een onwrikbare basis vormen voor <span class="keyword__whitebg">succes</span>
+          dat de tand des tijds doorstaat.</p>
         <button class="section6__button">Click the objects</button>
       </div>
     </section>
@@ -283,7 +298,10 @@
       <h2 class="section7__title lineh__big">Christoffel Plantin’s grootste triomf was: <span
           class="section7__title-2">de meertalige Biblia Regia</span></h2>
       <div class="section7__photos">
-        <img class="section7__photo" src="./src/assets/img/png/biblia.png" alt="Biblia Regia">
+        <picture class="section7__photo">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/biblia.png"
+            alt="Biblia Regia" />
+        </picture>
       </div>
       <div class="section7__text mobile">
         <p class="section7__text1 lineh__big">Een acht-delig meesterwerk in vijf talen, bedoeld om <span
@@ -294,18 +312,27 @@
           bevestigde.</p>
       </div>
       <div class="section7__text desktop">
-        <p class="section7__text1 lineh__big">Een <span class="keyword__whitebg">acht-delig meesterwerk</span> dat zijn talent en ambitie toonde. Deze Bijbel, gedrukt in Latijn, Grieks, Hebreeuws, Aramees
-        en Syrisch, was bedoeld om <span class="keyword__whitebg">koning Filips II</span> van Spanje te imponeren. Plantin drukte twaalf luxe exemplaren op perkament
-        en verwierf hiermee <span class="keyword__whitebg">internationale faam</span>.</p>
-        <p class="section7__text2 lineh__big">Als beloning verleende Filips II hem een <span class="keyword__whitebg">lucratieve licentie</span> voor het drukken van religieuze boeken. Dit strategische
-        werk bevestigde Plantin’s status als baanbrekend uitgever en visionair ondernemer.</p>
+        <p class="section7__text1 lineh__big">Een <span class="keyword__whitebg">acht-delig meesterwerk</span> dat zijn
+          talent en ambitie toonde. Deze Bijbel, gedrukt in Latijn, Grieks, Hebreeuws, Aramees
+          en Syrisch, was bedoeld om <span class="keyword__whitebg">koning Filips II</span> van Spanje te imponeren.
+          Plantin drukte twaalf luxe exemplaren op perkament
+          en verwierf hiermee <span class="keyword__whitebg">internationale faam</span>.</p>
+        <p class="section7__text2 lineh__big">Als beloning verleende Filips II hem een <span
+            class="keyword__whitebg">lucratieve licentie</span> voor het drukken van religieuze boeken. Dit strategische
+          werk bevestigde Plantin’s status als baanbrekend uitgever en visionair ondernemer.</p>
       </div>
     </section>
     <section id="section8">
       <h2 class="hidden">huis der liefde</h2>
       <div class="section8__photos">
-        <img class="section8__photo1" src="./src/assets/img/png/tornmoneynote_1.png" alt="gescheurd geldbiljet">
-        <img class="section8__photo2" src="./src/assets/img/png/tornmoneynote_2.png" alt="gescheurd geldbiljet">
+        <picture class="section8__photo1">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/tornmoneynote_1.png"
+            alt="gescheurd geldbiljet" />
+        </picture>
+        <picture class="section8__photo2">
+          <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/tornmoneynote_2.png"
+            alt="gescheurd geldbiljet" />
+        </picture>
       </div>
       <div class="section8__text">
         <p class="section8__text1 lineh__big">Plantin zag <span class="keyword__whitebg">sociale samenwerking</span> als
@@ -322,7 +349,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <h2 class="section9__title"><span class="elegantBig">o</span>ude generatie</h2>
-            <img class="section9__image" src="./src/assets/img/png/oldgeneration.png" alt="Plantijn">
+            <picture class="section9__image">
+              <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/oldgeneration.png"
+                alt="Plantijn" />
+            </picture>
             <p class="section9__text lineh__big">Plantins drukkerij bleef generaties in de familie en groeide uit tot
               een
               <span class="keyword__whitebg">symbool van
@@ -333,7 +363,10 @@
           </div>
           <div class="swiper-slide">
             <h2 class="section9__title new"><span class="elegantBig">n</span>ieuwe generatie</h2>
-            <img class="section9__image new" src="./src/assets/img/png/newgeneration.png" alt="Moretus">
+            <picture class="section9__image new">
+              <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/newgeneration.png"
+                alt="Moretus" />
+            </picture>
             <p class="section9__text new lineh__big">Zijn nalatenschap leeft voort in het <span
                 class="keyword__whitebg">Museum
                 Plantin-Moretus</span>, waar zijn werk en erfgoed bewaard blijven. <span class="keyword__whitebg">Jan
@@ -347,19 +380,20 @@
   </main>
   <footer>
     <div class="footer__texts">
-    <div class="newsletter">
-      <p class="footer__text">Benieuwd naar het volgende verhaal?</p>
-      <a class="footer__button">schrijf je in op de nieuwsbrief</a>
+      <div class="newsletter">
+        <p class="footer__text">Benieuwd naar het volgende verhaal?</p>
+        <a class="footer__button">schrijf je in op de nieuwsbrief</a>
+      </div>
+      <div class="museum">
+        <p class="footer__text">Wil je meer ontdekken over het museum?</p>
+        <a class="footer__button" href="https://museumplantinmoretus.be/nl" target="_blank">ga naar website van
+          museum</a>
+      </div>
     </div>
-    <div class="museum">
-      <p class="footer__text">Wil je meer ontdekken over het museum?</p>
-      <a class="footer__button" href="https://museumplantinmoretus.be/nl" target="_blank">ga naar website van museum</a>
-    </div>
-    </div>
-    <img class="footer__img" src="./src/assets/img/png/logo_big.png" alt="logo museum">
+    <picture class="footer__img">
+      <source sizes="" srcset="" type="image/avif" /><img src="./src/assets/img/png/logo_big.png" alt="logo museum" />
+    </picture>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
   <script type="module" src="./src/main.js"></script>
 </body>
 
