@@ -185,13 +185,13 @@ const drawSubtitle = () => {
 const drawHeroimage = () => {
   mm.add("(min-width: 320px)", () => {
     gsap.to(".heroimg__photo2", {
-      x: -240,
+      x: -300,
       duration: 1,
     });
   });
   mm.add("(min-width: 768px)", () => {
     gsap.to(".heroimg__photo2", {
-      x: -350,
+      x: -650,
       duration: 1,
     });
   });
